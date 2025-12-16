@@ -8,7 +8,7 @@ data = { "Product": ["Apple", "Banana", "Pear"],
 
 df=pd.DataFrame(data)
 
-filtered_df = df[df["Quantity" >10]]
-st.write(filtered_df)
-total_revenue = df[df["Quantity"]*df["Sales"]]
-st.write(total_revenue)
+filtered_df = df[df["Quantity"] >10]
+st.write("Products with quantity >10:", filtered_df)
+df["Revenue"] = df["Quantity"] * df["Price"]
+st.write(df)
