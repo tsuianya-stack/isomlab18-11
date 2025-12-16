@@ -21,7 +21,6 @@ if st.button("Agree"):
         st.write("Your name is ",name," and you are ",age," years old.")
 
 
-
 months = ["Jan","Feb","Mar","Apr","May","Jun",
           "Jul","Aug","Sep","Oct","Nov","Dec"]
 sales = np.random.randint(100, 1000, size=12)
@@ -85,5 +84,17 @@ name= st.text_input("Please enter your name:")
 
 if st.button("Enter"):
   st.write(f"Welcome {name}.")
+
+
+data={"Product": ["A", "B", "C", "D"], "Sales":[40, 120, 200, 80]}
+
+df=pd.DataFrame(data)
+st.write("Product Sales Data")
+st.write(df)
+
+filtered_df=df[df["Sales"]>=100]
+total_sales = filtered_df.sum()
+st.metric("Total Sales", total_sales)
+
 
 
