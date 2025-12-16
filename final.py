@@ -115,8 +115,8 @@ df["Revenue"] = df["Price"]*df["Quantity"]
 filtered_data= df[df["Quantity"]>=min_quantity]
 st.write("Filtered Table")
 st.write(filtered_data)
-total_revenue = df["Revenue"].sum()
+total_revenue = filtered_data["Revenue"].sum()
 st.metric("Total Revenue", total_revenue)
-st.bar_chat(df["Revenue"])
+st.bar_chart(filtered_data["Revenue"])
 
 
