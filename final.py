@@ -93,7 +93,7 @@ st.write("Product Sales Data")
 st.write(df)
 
 filtered_df=df[df["Sales"]>=100]
-total_sales = filtered_df.sum()
+total_sales = filtered_df["Sales"].sum()
 st.metric("Total Sales", total_sales)
 
 
