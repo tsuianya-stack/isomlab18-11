@@ -70,14 +70,14 @@ st.write("Students with score > 60")
 st.write(filtered_df)
 
 
-data = {"Product":["Pen","Book","Bag","Laptop"], "Price":[5, 20, 50, 800]}
+data = {"Product": ["Pen","Book","Bag","Laptop"], "Price":[5, 20, 50, 800]}
 
 df=pd.DataFrame(data)
-st.writer("Product Data")
-st.writer(df)
+st.write("Product Data")
+st.write(df)
 
 min_price= st.slider("Minimum Price", 0, 1000, 100)
 filtered_df=df[df["Price"]>=min_price]
-st.writer("Product with price over",min_price)
-st.writer(filtered_df)
+st.write("Product with price over",min_price)
+st.write(filtered_df)
 
