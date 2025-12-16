@@ -96,7 +96,7 @@ filtered_df=df[df["Sales"]>=100]
 total_sales = filtered_df["Sales"].sum()
 st.metric("Total Sales", total_sales)
 
-number = np.random.randint(0,100,Size=10)
+number = np.random.randint(0,100,size=10)
 df=pd.DataFrame({"Number":number})
 show_chart = st.checkbox("Click")
 if show_chart:
