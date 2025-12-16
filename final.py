@@ -99,7 +99,7 @@ st.metric("Total Sales", total_sales)
 number = np.random.randint(0,100,Size=10)
 df=pd.DataFrame(number)
 
-if st.checkbox("Click")
+if st.checkbox("Click"):
   st.line_chart(df)
 
 
