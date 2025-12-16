@@ -20,14 +20,6 @@ age = st.number_input("Enter your age:", min_value=0)
 if st.button("Agree"):
         st.write("Your name is ",name," and you are ",age," years old.")
 
-students= {"Name":["Alics", "Bob", "Carol"], "Score":[75, 55, 90]}
-
-df = pd.DataFrame(students)
-
-filtered_df=df[df["Score"]>60]
-
-st.write(filtered_df)
-
 
 
 months = ["Jan","Feb","Mar","Apr","May","Jun",
@@ -63,4 +55,17 @@ st.write(filtered_df)
 
 total_sales = filtered_df["Sales"].sum()
 st.metric("Total Sales", total_sales)
+
+
+students= {"Name":["Alice", "Bob", "Carol"], "Score":[75, 55, 90]}
+
+df = pd.DataFrame(students)
+
+filtered_df=df[df["Score"]>60]
+
+st.write("All students")
+st.write(df)
+
+st.write("Students with score > 60")
+st.write(filtered_df)
 
