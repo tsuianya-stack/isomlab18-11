@@ -103,4 +103,20 @@ if show_chart:
   st.line_chart(df)
 
 
+data = { "Product": ["Apple", "Banana", "Pear"], 
+        "Price": [5, 10, 15],
+        "Quantity": [10, 9, 12]}
+df=pd.DataDrame(data)
+st.title("Product Data")
+
+min_quantity = st.slider("Minimum Quantity", 0, 20, 10)
+df["Revenue"] = df["Price"]*df["Quantity"]
+
+filtered_data= df[df["Quantity"]>=min_quantity]
+st.write("Filtered Table")
+st.write(filtered_data)
+total_revenue = df["Revenue"].sum()
+st.metric("Total Revenue", total_revenue)
+st.bar_chat(df["Revenue"])
+
 
