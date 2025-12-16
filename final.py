@@ -118,5 +118,6 @@ st.write(filtered_data)
 total_revenue = filtered_data["Revenue"].sum()
 st.metric("Total Revenue", total_revenue)
 st.bar_chart(filtered_data.set_index("Product")["Revenue"])
+#df.set_index("xxx") > use this as x-axis
 
 
