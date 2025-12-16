@@ -37,3 +37,22 @@ show_chart = st.checkbox("Show sales chart")
 
 if show_chart:
     st.line_chart(df.set_index("Month"))
+
+
+
+data = {
+    "Product": ["A","B","C","D","E"],
+    "Sales": [120, 300, 250, 400, 180]
+}
+
+df = pd.DataFrame(data)
+st.write(df)
+
+min_sales = st.slider("Minimum sales", 0, 500, 200)
+
+filtered_df = df[df["Sales"] >= min_sales]
+st.write(filtered_df)
+
+total_sales = filtered_df["Sales"].sum()
+st.metric("Total Sales", total_sales)
+
