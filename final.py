@@ -106,7 +106,7 @@ if show_chart:
 data = { "Product": ["Apple", "Banana", "Pear"], 
         "Price": [5, 10, 15],
         "Quantity": [10, 9, 12]}
-df=pd.DataDrame(data)
+df=pd.DataFrame(data)
 st.title("Product Data")
 
 min_quantity = st.slider("Minimum Quantity", 0, 20, 10)
