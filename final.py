@@ -134,3 +134,40 @@ if uploaded_file is not None:
     st.dataframe(df)
 
 
+
+file_upload=st.file_uploader("Please upload the file:", type="csv")
+
+min_sales = st.slider("Minimum Sales", 0, 1000, 100)
+
+if file_upload is not None:
+        df=pd.read_csv(file_upload)
+        filtered_df=df[df["Sales"] >= min_sales]
+        st.write(filtered_df
+
+
+file_upload=st.file_uploader("Please upload the file:", type="csv")
+
+if file_upload is not None:
+        df=pd.read_csv(file_upload)
+        df["Revenue"]=df["Price']*df["Quantity']
+        total_revenue= df["Revenue'].sum()
+        st.write(df)
+        st.metric("Total Revenue", total_revenue)
+
+
+st.title("Sales Dashboard")
+st.metric("Total Revenue",total_revenue)
+
+with st.expander("View Raw Data")
+ st.write(df)
+        
+
+
+
+
+
+
+
+
+
+
