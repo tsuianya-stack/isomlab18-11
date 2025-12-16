@@ -18,5 +18,5 @@ name = st.text_input("Enter your name:")
 age = st.number_input("Enter your age:")
 
 agree = st.button("Agree")
-if st.button("Agree")
+if st.button("Agree"):
         st.write("Your name is ",name," and you are ",age," years old.")
