@@ -84,6 +84,6 @@ st.write(filtered_df)
 name= st.text_input("Please enter your name:")
 
 if st.button("Enter"):
-  st.write(f"Welcome{name}.")
+  st.write(f"Welcome {name}.")
 
 
