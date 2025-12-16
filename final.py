@@ -126,7 +126,6 @@ with st.expander("More Information"):
 
 
 st.title("Upload CSV File")
-
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
 if uploaded_file is not None:
