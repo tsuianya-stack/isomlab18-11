@@ -120,4 +120,8 @@ st.metric("Total Revenue", total_revenue)
 st.bar_chart(filtered_data.set_index("Product")["Revenue"])
 #df.set_index("xxx") > use this as x-axis
 
+with st.expander("More Information"):
+    st.write("This text is hidden until you click.")
+    st.write("Charts, tables, explanations can go here.")
+
 
