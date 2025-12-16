@@ -15,7 +15,25 @@ st.write(df)
 
 
 name = st.text_input("Enter your name:")
-age = st.number_input("Enter your age:")
+age = st.number_input("Enter your age:", min_value=0)
 
 if st.button("Agree"):
         st.write("Your name is ",name," and you are ",age," years old.")
+
+
+
+months = ["Jan","Feb","Mar","Apr","May","Jun",
+          "Jul","Aug","Sep","Oct","Nov","Dec"]
+sales = np.random.randint(100, 1000, size=12)
+
+df = pd.DataFrame({
+    "Month": months,
+    "Sales": sales
+})
+
+st.write(df)
+
+show_chart = st.checkbox("Show sales chart")
+
+if show_chart:
+    st.line_chart(df.set_index("Month"))
