@@ -12,3 +12,11 @@ filtered_df = df[df["Quantity"] >10]
 st.write("Products with quantity >10:", filtered_df)
 df["Revenue"] = df["Quantity"] * df["Price"]
 st.write(df)
+
+
+name = st.text_input("Enter your name:")
+age = st.number_input("Enter your age:")
+
+agree = st.button("Agree")
+if st.button("Agree")
+        st.write("Your name is ",name," and you are ",age," years old.")
