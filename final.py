@@ -96,5 +96,11 @@ filtered_df=df[df["Sales"]>=100]
 total_sales = filtered_df["Sales"].sum()
 st.metric("Total Sales", total_sales)
 
+number = np.random.randint(0,100,Size=10)
+df=pd.DataFrame(number)
+
+if st.checkbox("Click")
+  st.line_chart(df)
+
 
 
